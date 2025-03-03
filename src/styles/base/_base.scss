@@ -1,0 +1,87 @@
+@import '../base/vars';
+@import '../base/mixins';
+@import '../base/reset';
+
+// @font-face {
+//     font-family: 'Jost';
+//     src: url('/fonts/jost/Jost-Regular.ttf') format('truetype'),
+//         url('/fonts/jost/Jost-Regular.woff2') format('woff2');
+//     font-weight: 400;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Jost';
+//     src: url('/fonts/jost/Jost-SemiBold.ttf') format('truetype'),
+//         url('/fonts/jost/Jost-SemiBold.woff2') format('woff2');
+//     font-weight: 600;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Jost';
+//     src: url('/fonts/jost/Jost-Bold.ttf') format('truetype'),
+//         url('/fonts/jost/Jost-Bold.woff2') format('woff2');
+//     font-weight: 700;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Jost';
+//     src: url('/fonts/jost/Jost-ExtraBold.ttf') format('truetype'),
+//         url('/fonts/jost/Jost-ExtraBold.woff2') format('woff2');
+//     font-weight: 800;
+//     font-style: normal;
+// }
+
+
+body {
+    background-color: white;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+// section{
+//     margin-top: 2rem;
+//     margin-bottom: 2rem;
+// }
+
+.content {
+    padding-left: 105.8px;
+    padding-right: 105.8px;
+    // max-width: calc(100% - 211.6px); 
+    margin: 0 auto;
+
+    @include mediaWidth($desktop) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ddesktop */
+.con {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .con {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin: 0 15px;
+    }
+}

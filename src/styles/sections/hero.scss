@@ -1,0 +1,125 @@
+@import '../base/vars';
+@import '../base/mixins';
+@import '../base/reset';
+
+.hero {
+    background-image: url(../../../public/images/main_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    border-radius: 0 0 72px 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        max-width: 1200px;
+        width: 100%;
+
+        @include mediaWidth($largeDesktop) {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        flex: 1;
+        max-width: 500px;  
+
+        @include mediaWidth($tablet) {
+            max-width: 100%;
+            gap: 0;
+        }
+    }
+
+    &__title {
+        font-family: 'Jost', sans-serif;
+        font-weight: 600;
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+        letter-spacing: 0;
+        margin-bottom: 1rem;
+
+        @include mediaWidth($tablet) {
+            font-size: 2rem; 
+        }
+    }
+
+    &__subtitle {
+        font-size: 1rem;
+        color: greyLight;
+        margin-bottom: 1.5rem;
+
+        @include mediaWidth($tablet) {
+            font-size: 0.9rem;
+        }
+    }
+
+    &__btn {
+        @include button-styles(white, transparent);
+        padding: 12px 24px;
+        font-size: 1.2rem;
+        border-radius: 30px;
+        width: 50%;
+
+        @include mediaWidth($tablet) {
+            width: 100%;
+            font-size: 1rem;
+        }
+    }
+
+    &__visual {
+        flex: 1;
+        position: relative;
+        text-align: center;
+
+        .hero__img {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+
+            @include mediaWidth($tablet) {
+                max-width: 200px;
+            }
+        }
+
+        .hero__light {
+            position: absolute;
+            top: 10%;
+            left: -10%;
+            opacity: 0.7;
+            z-index: 1;
+            width: 100%;
+        }
+
+        &__avatars {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+
+            &__description {
+                font-size: 1rem;
+                color: gray;
+                max-width: 300px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+
+            // @include mediaWidth($tablet) {
+            //     bottom: 5%;
+            // }
+        }
+    }
+}

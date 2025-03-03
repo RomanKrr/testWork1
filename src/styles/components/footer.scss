@@ -1,0 +1,92 @@
+.footer {
+    background: #000000;
+    color: #fff;
+    padding: 50px 0;
+    border-radius: 60px 60px 0 0;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        
+        flex-wrap: wrap;
+    }
+
+    &__left {
+        flex: 1;
+        max-width: 500px;
+    }
+
+    &__logo {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 14px;
+        color: #ccc;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    &__copyright {
+        font-size: 14px;
+        color: #888;
+
+        span {
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+
+    &__right {
+        flex: 1;
+        max-width: 500px;
+        text-align: right;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    &__info {
+        font-size: 14px;
+        color: #ccc;
+        margin-bottom: 5px;
+    }
+
+    &__links {
+        margin-top: 15px;
+    }
+
+    &__link {
+        font-size: 14px;
+        color: #007bff;
+        text-decoration: none;
+        margin-right: 15px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Адаптив для мобільних пристроїв
+@media (max-width: 768px) {
+    .footer__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__right {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .footer__link {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
