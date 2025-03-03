@@ -5,6 +5,7 @@
   "scripts": {
     "scss": "sass src/styles/main.scss dist/styles/main.css --watch"
   },
+  "homepage": "https://romankrr.github.io/testWork1/",
   "keywords": [],
   "author": "",
   "license": "ISC",
