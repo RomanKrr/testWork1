@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "scss": "sass src/styles/main.scss dist/styles/main.css --watch"
+    "scss": "sass src/styles/main.scss dist/styles/main.css --watch",
+    "build": "npm run scss && cp -r src/* dist/"
   },
   "homepage": "https://romankrr.github.io/testWork1/",
   "keywords": [],
